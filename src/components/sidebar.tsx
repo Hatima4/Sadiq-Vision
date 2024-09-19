@@ -3,7 +3,7 @@ import React from "react";
 const Sidebar = () => {
   return (
     <div>
-      <image src = {"Logo.png"} ></image>
+      <img src = {"Logo.png"} ></img>
     </div>
   );
 };
