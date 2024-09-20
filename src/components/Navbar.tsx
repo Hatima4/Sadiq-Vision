@@ -2,8 +2,14 @@ import { Box, Flex, Button, Text, HStack } from "@chakra-ui/react";
 
 const Navbar = () => {
   return (
-    <Box>
-      <Flex as="nav" alignItems="center" padding="20px">
+    <Box bg="transparent" position="fixed" top="0" width="100%" zIndex="999">
+      <Flex
+        as="nav"
+        alignItems="center"
+        padding="20px"
+        bg="transparent"
+        color="white"
+      >
         {/* Left-aligned "Sadiq Vision" */}
         <Text fontWeight="bold" fontSize="24px">
           Sadiq Vision
