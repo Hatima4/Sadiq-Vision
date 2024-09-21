@@ -1,4 +1,4 @@
-import Sidebar from "./components/sidebar.tsx";
+import Sidebar from "./components/Navbar.tsx";
 import Welcome_Page from "./components/welcome.tsx";
 import { ChakraProvider } from "@chakra-ui/react";
 
@@ -6,7 +6,7 @@ function App() {
   return (
     <ChakraProvider>
       <>
-        <Sidebar />
+        <Navbar />
         <Welcome_Page />
       </>
     </ChakraProvider>
