@@ -4,7 +4,6 @@ import { Box, Heading, Image, Text, Button } from "@chakra-ui/react";
 const Welcome_Page = () => {
   return (
     <Box
-      backgroundImage="url('background.png')"
       backgroundSize="cover"
       backgroundPosition="center"
       height="100vh"
@@ -32,7 +31,7 @@ const Welcome_Page = () => {
         </Text>
       </Box>
 
-      {/* Button section */}
+      
       <Box position = "absolute" bottom="60px" width="100%" textAlign="center">
         <Button 
           color="white"  // Change text color to white
