@@ -4,10 +4,12 @@ import { ChakraProvider } from "@chakra-ui/react";
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <Welcome_Page />
-    </>
+    <ChakraProvider>
+      <>
+        <Navbar />
+        <Welcome_Page />
+      </>
+    </ChakraProvider>
   );
 }
 
