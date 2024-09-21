@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Heading, Image, Text, Button } from "@chakra-ui/react";
+import { easeInOut } from "framer-motion";
 
 const Welcome_Page = () => {
   return (
@@ -16,7 +17,18 @@ const Welcome_Page = () => {
         alignItems="center"
         height="80vh"
       >
-        <Image src="glasses.png" alt="Glasses Image" h="400px" w="400px" />
+        <Image
+          src="glasses.svg"
+          alt="Glasses Image"
+          h="400px"
+          w="400px"
+          stroke="black"
+          filter="drop-shadow(0px 0px 5px rgba(255,0,0))"
+          _hover={{
+            filter: "drop-shadow(0px 0px 10px rgba(255, 0, 0, 1))",
+            transition: easeInOut(2),
+          }}
+        />
 
         {/* Welcome text, positioned over the image */}
         <Text
@@ -32,15 +44,13 @@ const Welcome_Page = () => {
       </Box>
 
       <Box position="absolute" bottom="60px" width="100%" textAlign="center">
-        <Button
-          color="white" // Change text color to white
-          borderColor="white" // Add white border for the outline variant
-          variant="outline"
+        <Text
+          color="gray" // Change text color to gray
           fontWeight="bold"
-          fontSize="24px"
+          fontSize="16px"
         >
-          Scroll Down
-        </Button>
+          Learn More
+        </Text>
       </Box>
     </Box>
   );
