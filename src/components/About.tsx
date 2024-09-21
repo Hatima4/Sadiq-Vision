@@ -5,10 +5,8 @@ const Aboutpage = () => {
   return (
     <Box
       id="about"
-      background="white"
-      backgroundSize="cover"
-      backgroundPosition="center"
-      height="100vh"
+      bgGradient="linear(to-b, white.500,)" 
+      backgroundColor="#f0f0f0" 
     >
       <Box
         display="flex"
@@ -17,6 +15,7 @@ const Aboutpage = () => {
         height="100vh"
         marginLeft="10%"
       >
+        {/* Left Section: About Text */}
         <Box
           width="30%" // Adjust the width as needed
           textAlign="left"
@@ -38,6 +37,8 @@ const Aboutpage = () => {
             need it most.
           </Text>
         </Box>
+        
+        {/* Right Section: Image */}
         <Box
           width="40%"
           display="flex"

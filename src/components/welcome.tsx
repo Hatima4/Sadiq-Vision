@@ -1,6 +1,40 @@
-import { Box, Text, Button, Image, Flex } from '@chakra-ui/react';
+import { Box, Text, Button, Image, Flex, Circle } from '@chakra-ui/react';
+import React, { useState, useEffect } from "react";
 
 const Welcome_Page = () => {
+  const [activeSection, setActiveSection] = useState<string>("home");
+  const handleScroll = () => {
+    const scrollPos = window.scrollY;
+
+    if (scrollPos < window.innerHeight) {
+      setActiveSection("home");
+    } else if (
+      scrollPos >= window.innerHeight &&
+      scrollPos < 2 * window.innerHeight
+    ) {
+      setActiveSection("about");
+    } else if (
+      scrollPos >= 2 * window.innerHeight &&
+      scrollPos < 3 * window.innerHeight
+    ) {
+      setActiveSection("contact");
+    } else if (
+      scrollPos >= 3 * window.innerHeight &&
+      scrollPos < 4 * window.innerHeight
+    ) {
+      setActiveSection("team");
+    } else if (scrollPos >= 4 * window.innerHeight) {
+      setActiveSection("donate");
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <Box
       height="100vh"
@@ -28,7 +62,7 @@ const Welcome_Page = () => {
             size="lg"
             fontWeight="bold"
             borderRadius="lg"
-            _hover={{ boxShadow: '0 0 10px rgba(0, 212, 255, 0.8)' }}
+            
           >
             Learn More
           </Button>
@@ -43,10 +77,42 @@ const Welcome_Page = () => {
             w="500px"
           />
         </Box>
+        <Box  position="fixed"   // Position the dots vertically in the middle
+        right ="10px"       
+        top= "350px" 
+        transform="translateY(-50%)"  
+        zIndex="1000"
+        >
+        <Circle size = "12px" border="2px solid black" borderColor = "black" mb = {3} mr = {2} 
+        background={activeSection === "home" ? "black" : "none"}
+        >
+        </Circle>
+        <Circle size = "12px" border="2px solid black" borderColor = "black" mb = {3} mr = {2} 
+        background={activeSection === "about" ? "black" : "none"}
+        >
+        </Circle>
+        <Circle size = "12px" border="2px solid black" borderColor = "black" mb = {3} mr = {2} 
+        background={activeSection === "contact" ? "black" : "none"}
+        >
+        </Circle>
+        <Circle size = "12px" border="2px solid black" borderColor = "black" mb = {3} mr = {2} 
+        background={activeSection === "donate" ? "black" : "none"}
+        >
+        </Circle>
+
+        
+      
+
+
+        </Box>
+        
         
       </Flex>
+
+      
     </Box>
   );
 };
+
 
 export default Welcome_Page;

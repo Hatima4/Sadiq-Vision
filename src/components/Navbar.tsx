@@ -7,25 +7,17 @@ const Navbar: React.FC = () => {
 
   const handleScroll = () => {
     const scrollPos = window.scrollY;
+    const sectionHeight = window.innerHeight;
 
-    if (scrollPos < window.innerHeight) {
+    if (scrollPos < sectionHeight) {
       setActiveSection("home");
-    } else if (
-      scrollPos >= window.innerHeight &&
-      scrollPos < 2 * window.innerHeight
-    ) {
+    } else if (scrollPos >= sectionHeight && scrollPos < 2 * sectionHeight) {
       setActiveSection("about");
-    } else if (
-      scrollPos >= 2 * window.innerHeight &&
-      scrollPos < 3 * window.innerHeight
-    ) {
+    } else if (scrollPos >= 2 * sectionHeight && scrollPos < 3 * sectionHeight) {
       setActiveSection("contact");
-    } else if (
-      scrollPos >= 3 * window.innerHeight &&
-      scrollPos < 4 * window.innerHeight
-    ) {
+    } else if (scrollPos >= 3 * sectionHeight && scrollPos < 4 * sectionHeight) {
       setActiveSection("team");
-    } else if (scrollPos >= 4 * window.innerHeight) {
+    } else if (scrollPos >= 4 * sectionHeight) {
       setActiveSection("donate");
     }
   };
@@ -65,7 +57,7 @@ const Navbar: React.FC = () => {
               fontWeight="bold"
               fontSize="24px"
               borderBottom={
-                activeSection === "home" ? "2px solid cyan" : "none"
+                activeSection === "home" ? "2px solid #008B8B" : "none"
               }
               cursor="pointer"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -76,7 +68,7 @@ const Navbar: React.FC = () => {
               fontWeight="bold"
               fontSize="24px"
               borderBottom={
-                activeSection === "about" ? "2px solid cyan" : "none"
+                activeSection === "about" ? "2px solid #008B8B" : "none"
               }
               cursor="pointer"
               onClick={() =>
@@ -91,22 +83,7 @@ const Navbar: React.FC = () => {
               fontWeight="bold"
               fontSize="24px"
               borderBottom={
-                activeSection === "contact" ? "2px solid cyan" : "none"
-              }
-              cursor="pointer"
-              onClick={() =>
-                document
-                  .getElementById("contact")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-            >
-              Contact Us
-            </Text>
-            <Text
-              fontWeight="bold"
-              fontSize="24px"
-              borderBottom={
-                activeSection === "team" ? "2px solid cyan" : "none"
+                activeSection === "team" ? "2px solid #008B8B" : "none"
               }
               cursor="pointer"
               onClick={() =>
@@ -117,6 +94,21 @@ const Navbar: React.FC = () => {
             >
               Team
             </Text>
+            <Text
+              fontWeight="bold"
+              fontSize="24px"
+              borderBottom={
+                activeSection === "contact" ? "2px solid #008B8B" : "none"
+              }
+              cursor="pointer"
+              onClick={() =>
+                document
+                  .getElementById("contact")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              Contact us
+            </Text>
 
             <Button
               leftIcon={<AddIcon />}
@@ -124,6 +116,11 @@ const Navbar: React.FC = () => {
               fontSize="24px"
               colorScheme="black"
               variant="outline"
+              onClick={() =>
+                document
+                  .getElementById("donate")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
             >
               Donate
             </Button>
