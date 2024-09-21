@@ -1,4 +1,4 @@
-import Sidebar from "./components/Navbar.tsx";
+import Navbar from "./components/Navbar.tsx";
 import Welcome_Page from "./components/welcome.tsx";
 import { ChakraProvider } from "@chakra-ui/react";
 
