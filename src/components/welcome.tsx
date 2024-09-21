@@ -16,7 +16,6 @@ const Welcome_Page = () => {
         display="flex"
         alignItems="center"
         height="80vh"
-        position="relative"
       >
         <Image src="glasses.png" alt="Glasses Image" h="400px" w="400px" />
         
