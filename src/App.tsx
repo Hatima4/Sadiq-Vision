@@ -1,11 +1,13 @@
 import Navbar from "./components/Navbar.tsx";
-import { Box, HStack, Button, Text, ButtonGroup } from "@chakra-ui/react";
+import Welcome_Page from "./components/welcome.tsx";
+import { ChakraProvider } from "@chakra-ui/react";
 
 function App() {
   return (
-    <Box>
-      <Navbar></Navbar>
-    </Box>
+    <>
+      <Navbar />
+      <Welcome_Page />
+    </>
   );
 }
 
