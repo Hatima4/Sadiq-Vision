@@ -127,17 +127,6 @@ const Navbar: React.FC = () => {
             >
               Donate
             </Button>
-            <Button
-              fontWeight="bold"
-              fontSize="24px"
-              leftIcon={<EmailIcon />}
-              bg="transparent"
-              colorScheme="black"
-              variant="outline"
-            >
-              {" "}
-              Email
-            </Button>
           </HStack>
         </Flex>
       </Flex>
