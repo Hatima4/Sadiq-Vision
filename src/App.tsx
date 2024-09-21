@@ -5,10 +5,8 @@ import { ChakraProvider } from "@chakra-ui/react";
 function App() {
   return (
     <ChakraProvider>
-      <>
-        <Navbar />
-        <Welcome_Page />
-      </>
+      <Navbar />
+      <Welcome_Page />
     </ChakraProvider>
   );
 }
