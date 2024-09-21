@@ -65,7 +65,7 @@ const Navbar: React.FC = () => {
               fontWeight="bold"
               fontSize="24px"
               borderBottom={
-                activeSection === "home" ? "2px solid cyan" : "none"
+                activeSection === "home" ? "4px solid cyan" : "none"
               }
               cursor="pointer"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -76,7 +76,7 @@ const Navbar: React.FC = () => {
               fontWeight="bold"
               fontSize="24px"
               borderBottom={
-                activeSection === "about" ? "2px solid cyan" : "none"
+                activeSection === "about" ? "4px solid cyan" : "none"
               }
               cursor="pointer"
               onClick={() =>
@@ -91,7 +91,7 @@ const Navbar: React.FC = () => {
               fontWeight="bold"
               fontSize="24px"
               borderBottom={
-                activeSection === "contact" ? "2px solid cyan" : "none"
+                activeSection === "contact" ? "4px solid cyan" : "none"
               }
               cursor="pointer"
               onClick={() =>
@@ -106,7 +106,7 @@ const Navbar: React.FC = () => {
               fontWeight="bold"
               fontSize="24px"
               borderBottom={
-                activeSection === "team" ? "2px solid cyan" : "none"
+                activeSection === "team" ? "4px solid cyan" : "none"
               }
               cursor="pointer"
               onClick={() =>
