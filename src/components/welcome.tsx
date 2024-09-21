@@ -13,7 +13,7 @@ const Welcome_Page = () => {
         justifyContent="center"
         display="flex"
         alignItems="center"
-        height="100vh"
+        height="80vh"
       >
         <Image src="glasses.png" alt="Glasses Image" h="400px" w="400px" />
       </Box>
