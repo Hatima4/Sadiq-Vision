@@ -1,8 +1,12 @@
-import Sidebar from "./components/sidebar.tsx";
-import { ChakraProvider } from "@chakra-ui/react";
+import Navbar from "./components/Navbar.tsx";
+import { Box, HStack, Button, Text, ButtonGroup } from "@chakra-ui/react";
 
 function App() {
-  return <Sidebar></Sidebar>;
+  return (
+    <Box>
+      <Navbar></Navbar>
+    </Box>
+  );
 }
 
 export default App;
