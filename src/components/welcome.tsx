@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Heading, Image } from "@chakra-ui/react";
+import { Box, Heading, Image } from "@chakra-ui/react";
 
 const Welcome_Page = () => {
   return (
