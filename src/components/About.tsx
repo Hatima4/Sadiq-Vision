@@ -5,7 +5,7 @@ const Aboutpage = () => {
   return (
     <Box
       id="about"
-      backgroundImage="url('aboutBackground.webp')"
+      background="white"
       backgroundSize="cover"
       backgroundPosition="center"
       height="100vh"
@@ -21,10 +21,10 @@ const Aboutpage = () => {
           width="30%" // Adjust the width as needed
           textAlign="left"
         >
-          <Heading color="white" marginBottom="20px">
+          <Heading color="black" marginBottom="20px">
             About Sadiq Vision
           </Heading>
-          <Text color="white" fontWeight="bold" fontSize="md">
+          <Text color="black" fontWeight="bold" fontSize="md">
             At Sadiq Vision, we believe that true vision matters. Our mission is
             to make eyewear accessible to less privileged individuals in rural
             areas of Pakistan, helping them see the world clearly and live

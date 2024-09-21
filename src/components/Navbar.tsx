@@ -38,13 +38,20 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <Box bg="transparent" position="fixed" top="0" width="100%" zIndex="999" backdropFilter="blur(3px)" >
+    <Box
+      bg="transparent"
+      position="fixed"
+      top="0"
+      width="100%"
+      zIndex="999"
+      backdropFilter="blur(3px)"
+    >
       <Flex
         as="nav"
         alignItems="center"
         padding="20px"
         bg="transparent"
-        color="white"
+        color="black"
       >
         {/* Left-aligned "Sadiq Vision" */}
         <Text fontWeight="bold" fontSize="24px">
@@ -58,7 +65,7 @@ const Navbar: React.FC = () => {
               fontWeight="bold"
               fontSize="24px"
               borderBottom={
-                activeSection === "home" ? "2px solid white" : "none"
+                activeSection === "home" ? "2px solid cyan" : "none"
               }
               cursor="pointer"
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
@@ -69,7 +76,7 @@ const Navbar: React.FC = () => {
               fontWeight="bold"
               fontSize="24px"
               borderBottom={
-                activeSection === "about" ? "2px solid white" : "none"
+                activeSection === "about" ? "2px solid cyan" : "none"
               }
               cursor="pointer"
               onClick={() =>
@@ -84,7 +91,7 @@ const Navbar: React.FC = () => {
               fontWeight="bold"
               fontSize="24px"
               borderBottom={
-                activeSection === "contact" ? "2px solid white" : "none"
+                activeSection === "contact" ? "2px solid cyan" : "none"
               }
               cursor="pointer"
               onClick={() =>
@@ -99,7 +106,7 @@ const Navbar: React.FC = () => {
               fontWeight="bold"
               fontSize="24px"
               borderBottom={
-                activeSection === "team" ? "2px solid white" : "none"
+                activeSection === "team" ? "2px solid cyan" : "none"
               }
               cursor="pointer"
               onClick={() =>
@@ -110,21 +117,27 @@ const Navbar: React.FC = () => {
             >
               Team
             </Text>
-            
+
             <Button
-              leftIcon = {<AddIcon/>}
+              leftIcon={<AddIcon />}
               fontWeight="bold"
               fontSize="24px"
-              colorScheme="white"
+              colorScheme="black"
               variant="outline"
             >
               Donate
             </Button>
-            <Button 
-            fontWeight = "bold"
-            fontSize = "24px"
-            
-            leftIcon = {<EmailIcon/>} bg = "transparent" colorScheme = "white" variant = "outline"> Email</Button>
+            <Button
+              fontWeight="bold"
+              fontSize="24px"
+              leftIcon={<EmailIcon />}
+              bg="transparent"
+              colorScheme="black"
+              variant="outline"
+            >
+              {" "}
+              Email
+            </Button>
           </HStack>
         </Flex>
       </Flex>
