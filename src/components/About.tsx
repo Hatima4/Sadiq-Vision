@@ -5,8 +5,7 @@ const Aboutpage = () => {
   return (
     <Box
       id="about"
-      bgGradient="linear(to-b, white.500,)" 
-      backgroundColor="#f0f0f0" 
+      background= "whitesmoke"
     >
       <Box
         display="flex"

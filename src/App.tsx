@@ -14,6 +14,7 @@ function App() {
         <Welcome_Page /> 
         <Aboutpage></Aboutpage>
         <Team></Team>
+        <Contactus></Contactus>
        
       </>
     </ChakraProvider>

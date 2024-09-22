@@ -14,9 +14,9 @@ const Navbar: React.FC = () => {
     } else if (scrollPos >= sectionHeight && scrollPos < 2 * sectionHeight) {
       setActiveSection("about");
     } else if (scrollPos >= 2 * sectionHeight && scrollPos < 3 * sectionHeight) {
-      setActiveSection("contact");
-    } else if (scrollPos >= 3 * sectionHeight && scrollPos < 4 * sectionHeight) {
       setActiveSection("team");
+    } else if (scrollPos >= 3 * sectionHeight && scrollPos < 4 * sectionHeight) {
+      setActiveSection("contact");
     } else if (scrollPos >= 4 * sectionHeight) {
       setActiveSection("donate");
     }
@@ -42,7 +42,7 @@ const Navbar: React.FC = () => {
         as="nav"
         alignItems="center"
         padding="20px"
-        bg="transparent"
+        bg="white"
         color="black"
       >
         {/* Left-aligned "Sadiq Vision" */}
