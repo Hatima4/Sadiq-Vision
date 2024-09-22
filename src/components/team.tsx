@@ -1,11 +1,12 @@
 import React from "react";
-import { Box, HStack, VStack, Text, Circle } from "@chakra-ui/react";
+import { Box, HStack, VStack, Text, Circle, Image, Link} from "@chakra-ui/react";
 
 const Team = () => {
   return (
     <Box
       height="100vh"
-      bgGradient="linear(to-b, #ffffff, #f0f0f0)"
+      backgroundColor="whitesmoke" 
+      id = "team"
     >
       <Box textAlign="center" pt="50px">
         <Text color="black" fontWeight="bold" fontSize="5xl">
@@ -22,10 +23,18 @@ const Team = () => {
       >
         {/* Qasim */}
         <VStack align="center">
-          <Circle size="200px" border="3px solid black" />
+          <Circle size="205px" border="3px solid black">
+          <Link href = "https://www.instagram.com/whiz_qasim786/">
+          <Image src = "qasim_pic.jpg" objectFit= "cover" boxSize="100%" borderRadius="100px" ></Image>
+          </Link>
+
+
+          </Circle>
+
           <Text color="black" fontWeight="bold" fontSize="3xl">
             Qasim
           </Text>
+          Image
           <Text color="grey" fontWeight="bold" fontSize="xl">
             NGO Owner
           </Text>

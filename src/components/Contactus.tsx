@@ -6,10 +6,12 @@ const Contactus = () => {
   return (
     <Box
       id="contact"
-      background="white"
+      bgGradient="linear(to-b, white.500,)" 
+      backgroundColor="whitesmoke" 
       backgroundSize="cover"
       backgroundPosition="center"
       height="100vh"
+
     >
       <Box
         display="flex"
