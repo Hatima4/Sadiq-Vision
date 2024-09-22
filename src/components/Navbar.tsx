@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
       scrollPos >= 3 * sectionHeight &&
       scrollPos < 4 * sectionHeight
     ) {
-      setActiveSection("contact"); // Assuming another section "projects" here.
+      setActiveSection("contact");
     }
   };
 
