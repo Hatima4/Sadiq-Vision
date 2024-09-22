@@ -22,19 +22,7 @@ const Navbar: React.FC = () => {
       scrollPos >= 3 * sectionHeight &&
       scrollPos < 4 * sectionHeight
     ) {
-      setActiveSection("contact");
-    } else if (
-      scrollPos >= 2 * sectionHeight &&
-      scrollPos < 3 * sectionHeight
-    ) {
-      setActiveSection("team");
-    } else if (
-      scrollPos >= 3 * sectionHeight &&
-      scrollPos < 4 * sectionHeight
-    ) {
-      setActiveSection("contact");
-    } else if (scrollPos >= 4 * sectionHeight) {
-      setActiveSection("donate");
+      setActiveSection("contact"); // Assuming another section "projects" here.
     }
   };
 
