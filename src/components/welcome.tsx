@@ -85,7 +85,7 @@ const Welcome_Page = () => {
             w="500px"
           />
         </Box>
-        <Box  position="fixed"   // Position the dots vertically in the middle
+        <Box  position="fixed"   
         right ="10px"       
         top= "300px" 
         transform="translateY(-50%)"  
