@@ -13,10 +13,16 @@ const Navbar: React.FC = () => {
       setActiveSection("home");
     } else if (scrollPos >= sectionHeight && scrollPos < 2 * sectionHeight) {
       setActiveSection("about");
-    } else if (scrollPos >= 2 * sectionHeight && scrollPos < 3 * sectionHeight) {
-      setActiveSection("contact");
-    } else if (scrollPos >= 3 * sectionHeight && scrollPos < 4 * sectionHeight) {
+    } else if (
+      scrollPos >= 2 * sectionHeight &&
+      scrollPos < 3 * sectionHeight
+    ) {
       setActiveSection("team");
+    } else if (
+      scrollPos >= 3 * sectionHeight &&
+      scrollPos < 4 * sectionHeight
+    ) {
+      setActiveSection("contact");
     } else if (scrollPos >= 4 * sectionHeight) {
       setActiveSection("donate");
     }
