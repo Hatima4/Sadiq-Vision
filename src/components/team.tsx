@@ -40,8 +40,8 @@ const Team = () => {
             NGO Owner
           </Text>
           <Text color="grey" fontSize="sm" textAlign="center">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
-            lacinia odio vitae vestibulum vestibulum.
+            
+An IB Diploma student, has always had a passion to make a tangible difference. Qasim leads initiatives that collect and distribute eyeglass frames to those in need, particularly in Pakistan. His innovative approach and commitment to sustainable and long-term solutions for the impoverished drives the organization's mission to ensure that vision care is accessible to all.
           </Text>
         </VStack>
 
