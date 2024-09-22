@@ -1,13 +1,17 @@
 import React from "react";
-import { Box, HStack, VStack, Text, Circle, Image, Link} from "@chakra-ui/react";
+import {
+  Box,
+  HStack,
+  VStack,
+  Text,
+  Circle,
+  Image,
+  Link,
+} from "@chakra-ui/react";
 
 const Team = () => {
   return (
-    <Box
-      height="100vh"
-      backgroundColor="whitesmoke" 
-      id = "team"
-    >
+    <Box height="100vh" backgroundColor="whitesmoke" id="team">
       <Box textAlign="center" pt="50px">
         <Text color="black" fontWeight="bold" fontSize="5xl">
           Team
@@ -15,22 +19,19 @@ const Team = () => {
       </Box>
 
       {/* Team Members */}
-      <HStack
-       
-        paddingTop="20px"
-        spacing={8} 
-        justify="center" 
-      >
+      <HStack paddingTop="20px" spacing={8} justify="center">
         {/* Qasim */}
         <VStack align="center">
           <Circle size="205px" border="3px solid black">
-          <Link href = "https://www.instagram.com/whiz_qasim786/">
-          <Image src = "qasim_pic.jpg" objectFit= "cover" boxSize="100%" borderRadius="100px" ></Image>
-          </Link>
-
-
+            <Link href="https://www.instagram.com/whiz_qasim786/">
+              <Image
+                src="qasim_pic.jpg"
+                objectFit="cover"
+                boxSize="100%"
+                borderRadius="100px"
+              ></Image>
+            </Link>
           </Circle>
-
           <Text color="black" fontWeight="bold" fontSize="3xl">
             Qasim
           </Text>
@@ -39,7 +40,8 @@ const Team = () => {
             NGO Owner
           </Text>
           <Text color="grey" fontSize="sm" textAlign="center">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+            lacinia odio vitae vestibulum vestibulum.
           </Text>
         </VStack>
 
@@ -53,21 +55,37 @@ const Team = () => {
             Web Developer
           </Text>
           <Text color="grey" fontSize="sm" textAlign="center">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulumdadjaisdjasioudjasodashjoudas
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+            lacinia odio vitae vestibulum
+            vestibulumdadjaisdjasioudjasodashjoudas
           </Text>
         </VStack>
 
         {/* Hatim */}
         <VStack align="center">
-          <Circle size="200px" border="3px solid black" />
+          <Circle size="205px" border="3px solid black">
+            <Link href="https://www.instagram.com/bigbadh4/">
+              <Image
+                src="kaneki.png"
+                objectFit="fill"
+                boxSize="100%"
+                borderRadius="200px"
+                height="200px"
+                width="200px"
+              ></Image>
+            </Link>
+          </Circle>
           <Text color="black" fontWeight="bold" fontSize="3xl">
             Hatim
           </Text>
+
           <Text color="grey" fontWeight="bold" fontSize="xl">
             Web Developer
           </Text>
           <Text color="grey" fontSize="sm" textAlign="center">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum.
+            IB Student in Jess | Interested in machine learning and web
+            development | Proficient in Python, Typescript and C++ | Znotes
+            contributor | Freelance web developer
           </Text>
         </VStack>
       </HStack>
