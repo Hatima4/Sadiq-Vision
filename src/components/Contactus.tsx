@@ -12,10 +12,10 @@ const Contactus = () => {
 
     emailjs
       .sendForm(
-        "service_nri27ov", // Your EmailJS service ID
-        "template_f04v2af", // Your EmailJS template ID
-        form.current!,       // The form reference
-        "ox2ZKXfeOv4RTpwUu" // Your EmailJS user ID (Public Key)
+        "service_nri27ov", 
+        "template_f04v2af", 
+        form.current!,       
+        "ox2ZKXfeOv4RTpwUu" 
       )
       .then(
         (result) => {
@@ -59,8 +59,7 @@ const Contactus = () => {
         <Box width="30%" textAlign="left">
           <Heading marginBottom="30px">Contact Us</Heading>
           <Text marginBottom="20px">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          At Sadiq Vision, we are committed to making vision care accessible to those in need. Reach out to us if you have any questions about donating eyeglass lenses, partnering with us in our mission, or learning more about our ongoing projects to support underprivileged communities in Pakistan. Whether you’re looking to contribute, collaborate, or simply need more information, we’re here to help. Together, we can make a lasting impact by restoring sight and providing hope to those who need it most.
           </Text>
         </Box>
         <Box
