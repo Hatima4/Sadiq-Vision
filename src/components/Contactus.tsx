@@ -1,5 +1,13 @@
 import React, { useRef } from "react";
-import { Text, Box, Heading, Input, Textarea, Button, useToast } from "@chakra-ui/react";
+import {
+  Text,
+  Box,
+  Heading,
+  Input,
+  Textarea,
+  Button,
+  useToast,
+} from "@chakra-ui/react";
 import { EmailIcon } from "@chakra-ui/icons";
 import emailjs from "emailjs-com";
 
@@ -8,7 +16,7 @@ const Contactus = () => {
   const toast = useToast();
 
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();  // Prevent the default form submission behavior
+    e.preventDefault(); // Prevent the default form submission behavior
 
     emailjs
       .sendForm(
@@ -26,7 +34,7 @@ const Contactus = () => {
             duration: 5000,
             isClosable: true,
           });
-          form.current!.reset();  // Reset the form after successful submission
+          form.current!.reset(); // Reset the form after successful submission
         },
         (error) => {
           console.log(error.text);
@@ -75,7 +83,7 @@ const Contactus = () => {
             </Text>
             <Input
               placeholder="Enter Name"
-              name="user_name"  // Name attribute is required by EmailJS to map data
+              name="user_name" // Name attribute is required by EmailJS to map data
               marginBottom="20px"
               required
             />
@@ -85,7 +93,7 @@ const Contactus = () => {
             <Input
               type="email"
               placeholder="Enter Email"
-              name="user_email"  // Name attribute is required by EmailJS
+              name="user_email" // Name attribute is required by EmailJS
               marginBottom="20px"
               required
             />
@@ -94,7 +102,7 @@ const Contactus = () => {
             </Text>
             <Textarea
               placeholder="Enter message"
-              name="message"  // Name attribute for EmailJS
+              name="message" // Name attribute for EmailJS
               height="300px"
               resize="none"
               textAlign="left"
@@ -102,7 +110,7 @@ const Contactus = () => {
               required
             />
             <Button
-              type="submit"  // Submit type button
+              type="submit" // Submit type button
               colorScheme="blue"
               width="200px"
               marginLeft="200px"

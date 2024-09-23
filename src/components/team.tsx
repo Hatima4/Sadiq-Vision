@@ -27,7 +27,13 @@ const Team = () => {
         mx="auto"
       >
         {/* Qasim */}
-        <VStack align="center" textAlign="center" mr = {5} width = "60%" paddingTop={8}>
+        <VStack
+          align="center"
+          textAlign="center"
+          mr={5}
+          width="60%"
+          paddingTop={8}
+        >
           <Circle size="205px" border="3px solid black">
             <Link href="https://www.instagram.com/whiz_qasim786/">
               <Image
@@ -45,19 +51,27 @@ const Team = () => {
             NGO Owner
           </Text>
           <Text color="grey" fontSize="sm" textAlign="center">
-            I'm an IB Diploma student passionate about making a difference. I lead initiatives to collect and distribute eyeglass frames to those in need, especially in Pakistan. My focus is on creating sustainable, long-term solutions to help the less fortunate get access to vision care.
+            I'm an IB Diploma student passionate about making a difference. I
+            lead initiatives to collect and distribute eyeglass frames to those
+            in need, especially in Pakistan. My focus is on creating
+            sustainable, long-term solutions to help the less fortunate get
+            access to vision care.
           </Text>
         </VStack>
 
         {/* Shrey */}
-        <VStack align="center" textAlign="center" width = "60%">
+        <VStack align="center" textAlign="center" width="60%">
           <Circle size="200px" border="3px solid black">
-            <Image
-              src="black.jpeg"
-              objectFit="cover"
-              boxSize="100%"
-              borderRadius="100px"
-            />
+            <Link href="https://www.linkedin.com/in/shrey-nautiyal-48000926b/">
+              <Image
+                src="black.jpeg"
+                objectFit="fill"
+                boxSize="100%"
+                borderRadius="200px"
+                height="200px"
+                width="200px"
+              />
+            </Link>
           </Circle>
           <Text color="black" fontWeight="bold" fontSize="3xl">
             Shrey
@@ -66,12 +80,14 @@ const Team = () => {
             Web Developer
           </Text>
           <Text color="grey" fontSize="sm" textAlign="center">
-            JESS IB Student | Interested in math and programming | Can write in Python, Typescript and web development languages | Aspiring freelance web developer
+            JESS IB Student | Interested in math and programming | Can write in
+            Python, Typescript and web development languages | Aspiring
+            freelance web developer
           </Text>
         </VStack>
 
         {/* Hatim */}
-        <VStack align="center" textAlign="center" width = "60%">
+        <VStack align="center" textAlign="center" width="60%">
           <Circle size="205px" border="3px solid black">
             <Link href="https://www.linkedin.com/in/hatim-aamir-8aba7724a/">
               <Image
