@@ -64,7 +64,7 @@ const Team = () => {
         {/* Hatim */}
         <VStack align="center">
           <Circle size="205px" border="3px solid black">
-            <Link href="https://www.instagram.com/bigbadh4/">
+            <Link href="https://www.linkedin.com/in/hatim-aamir-8aba7724a/">
               <Image
                 src="kaneki.png"
                 objectFit="fill"
@@ -83,9 +83,8 @@ const Team = () => {
             Web Developer
           </Text>
           <Text color="grey" fontSize="sm" textAlign="center">
-            IB Student in Jess | Interested in machine learning and web
-            development | Proficient in Python, Typescript and C++ | Znotes
-            contributor | Freelance web developer
+            IB Student in Jess | Interested in machine learning | Proficient in
+            Python, Typescript and C++ | Freelance web developer
           </Text>
         </VStack>
       </HStack>
