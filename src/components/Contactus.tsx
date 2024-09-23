@@ -12,10 +12,10 @@ const Contactus = () => {
 
     emailjs
       .sendForm(
-        "service_nri27ov", 
-        "template_f04v2af", 
+        process.env.REACT_APP_EMAILJS_SERVICE_ID!, 
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID!, 
         form.current!,       
-        "ox2ZKXfeOv4RTpwUu" 
+        process.env.REACT_APP_EMAILJS_USER_ID!
       )
       .then(
         (result) => {
