@@ -114,31 +114,7 @@ const Navbar: React.FC = () => {
               Contact us
             </Text>
 
-            <Button
-              leftIcon={<AddIcon />}
-              fontWeight="bold"
-              fontSize="24px"
-              colorScheme="black"
-              variant="outline"
-              onClick={() =>
-                document
-                  .getElementById("donate")
-                  ?.scrollIntoView({ behavior: "smooth" })
-              }
-            >
-              Donate
-            </Button>
-            <Button
-              fontWeight="bold"
-              fontSize="24px"
-              leftIcon={<EmailIcon />}
-              bg="transparent"
-              colorScheme="black"
-              variant="outline"
-            >
-              {" "}
-              Email
-            </Button>
+
           </HStack>
         </Flex>
       </Flex>

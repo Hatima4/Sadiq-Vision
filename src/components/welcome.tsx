@@ -53,7 +53,7 @@ const Welcome_Page = () => {
           <Text fontSize="5xl" fontWeight="bold">
             Welcome to our vision
           </Text>
-          <Text fontSize="lg" color="gray.500" fontStyle="italic" mt={2}>
+          <Text fontSize="xl" color="gray.500" fontStyle="italic" mt={2}>
             Because all vision matters
           </Text>
           <Button
