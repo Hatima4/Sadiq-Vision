@@ -7,50 +7,57 @@ import {
   Circle,
   Image,
   Link,
+  useBreakpointValue,
 } from "@chakra-ui/react";
 
 const Team = () => {
+  const memberWidth = useBreakpointValue({ base: "100%", md: "30%" });
+  const circleSize = useBreakpointValue({ base: "150px", md: "205px" });
+  const fontSizeName = useBreakpointValue({ base: "2xl", md: "3xl" });
+  const fontSizeRole = useBreakpointValue({ base: "lg", md: "xl" });
+  const fontSizeBio = useBreakpointValue({ base: "sm", md: "md" });
+
   return (
-    <Box height="100vh" backgroundColor="whitesmoke" id="team">
-      <Box textAlign="center" pt="50px">
+    <Box height="auto" backgroundColor="whitesmoke" id="team" py="50px">
+      <Box textAlign="center">
         <Text color="black" fontWeight="bold" fontSize="5xl">
           Team
         </Text>
       </Box>
 
-      {/* Team Members */}
       <HStack
         paddingTop="20px"
-        justify="space-between"
+        justify={{ base: "center", md: "space-between" }}
         alignItems="center"
-        width="80%"
+        width="90%"
         mx="auto"
+        flexWrap="wrap"
+        spacing={{ base: "20px", md: "0" }}
       >
         {/* Qasim */}
         <VStack
           align="center"
           textAlign="center"
-          mr={5}
-          width="60%"
+          width={memberWidth}
           paddingTop={8}
         >
-          <Circle size="205px" border="3px solid black">
+          <Circle size={circleSize} border="3px solid black" overflow="hidden">
             <Link href="https://www.instagram.com/whiz_qasim786/">
               <Image
                 src="qasim_pic.jpg"
                 objectFit="cover"
-                boxSize="100%"
-                borderRadius="100px"
+                width="100%"
+                height="100%"
               />
             </Link>
           </Circle>
-          <Text color="black" fontWeight="bold" fontSize="3xl">
+          <Text color="black" fontWeight="bold" fontSize={fontSizeName}>
             Qasim
           </Text>
-          <Text color="grey" fontWeight="bold" fontSize="xl">
+          <Text color="grey" fontWeight="bold" fontSize={fontSizeRole}>
             NGO Owner
           </Text>
-          <Text color="grey" fontSize="sm" textAlign="center">
+          <Text color="grey" fontSize={fontSizeBio} textAlign="center">
             I'm an IB Diploma student passionate about making a difference. I
             lead initiatives to collect and distribute eyeglass frames to those
             in need, especially in Pakistan. My focus is on creating
@@ -59,27 +66,24 @@ const Team = () => {
           </Text>
         </VStack>
 
-        {/* Shrey */}
-        <VStack align="center" textAlign="center" width="60%">
-          <Circle size="200px" border="3px solid black">
+        <VStack align="center" textAlign="center" width={memberWidth}>
+          <Circle size={circleSize} border="3px solid black" overflow="hidden">
             <Link href="https://www.linkedin.com/in/shrey-nautiyal-48000926b/">
               <Image
                 src="black.jpeg"
-                objectFit="fill"
-                boxSize="100%"
-                borderRadius="200px"
-                height="200px"
-                width="200px"
+                objectFit="cover"
+                boxSize={circleSize}
+                borderRadius="full"
               />
             </Link>
           </Circle>
-          <Text color="black" fontWeight="bold" fontSize="3xl">
+          <Text color="black" fontWeight="bold" fontSize={fontSizeName}>
             Shrey
           </Text>
-          <Text color="grey" fontWeight="bold" fontSize="xl">
+          <Text color="grey" fontWeight="bold" fontSize={fontSizeRole}>
             Web Developer
           </Text>
-          <Text color="grey" fontSize="sm" textAlign="center">
+          <Text color="grey" fontSize={fontSizeBio} textAlign="center">
             JESS IB Student | Interested in math and programming | Can write in
             Python, Typescript and web development languages | Aspiring
             freelance web developer
@@ -87,26 +91,24 @@ const Team = () => {
         </VStack>
 
         {/* Hatim */}
-        <VStack align="center" textAlign="center" width="60%">
-          <Circle size="205px" border="3px solid black">
+        <VStack align="center" textAlign="center" width={memberWidth}>
+          <Circle size={circleSize} border="3px solid black" overflow="hidden">
             <Link href="https://www.linkedin.com/in/hatim-aamir-8aba7724a/">
               <Image
                 src="kaneki.png"
-                objectFit="fill"
-                boxSize="100%"
-                borderRadius="200px"
-                height="200px"
-                width="200px"
+                objectFit="cover"
+                width="100%"
+                height="100%"
               />
             </Link>
           </Circle>
-          <Text color="black" fontWeight="bold" fontSize="3xl">
+          <Text color="black" fontWeight="bold" fontSize={fontSizeName}>
             Hatim
           </Text>
-          <Text color="grey" fontWeight="bold" fontSize="xl">
+          <Text color="grey" fontWeight="bold" fontSize={fontSizeRole}>
             Web Developer
           </Text>
-          <Text color="grey" fontSize="sm" textAlign="center">
+          <Text color="grey" fontSize={fontSizeBio} textAlign="center">
             IB Student in Jess | Interested in machine learning | Proficient in
             Python, Typescript and C++ | Freelance web developer
           </Text>

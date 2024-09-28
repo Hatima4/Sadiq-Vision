@@ -7,6 +7,7 @@ import {
   Textarea,
   Button,
   useToast,
+  Flex,
 } from "@chakra-ui/react";
 import { EmailIcon } from "@chakra-ui/icons";
 import emailjs from "emailjs-com";
@@ -29,7 +30,7 @@ const Contactus = () => {
         (result) => {
           toast({
             title: "Email Sent.",
-            description: "Sent.",
+            description: "Your message has been successfully sent!",
             status: "success",
             duration: 5000,
             isClosable: true,
@@ -40,7 +41,8 @@ const Contactus = () => {
           console.log(error.text);
           toast({
             title: "Error.",
-            description: "There was an error sending your message.",
+            description:
+              "There was an error sending your message. Please try again later.",
             status: "error",
             duration: 5000,
             isClosable: true,
@@ -55,73 +57,80 @@ const Contactus = () => {
       background="white"
       backgroundSize="cover"
       backgroundPosition="center"
-      height="100vh"
+      minHeight="100vh"
+      padding="5%"
     >
-      <Box
-        display="flex"
-        justifyContent="flex-start"
-        alignItems="center"
-        height="100vh"
-        marginLeft="10%"
+      <Flex
+        direction={{ base: "column", md: "row" }}
+        justifyContent="space-between"
+        alignItems="flex-start"
       >
-        <Box width="30%" textAlign="left">
+        {/* Contact Information */}
+        <Box
+          width={{ base: "100%", md: "40%" }}
+          textAlign={{ base: "center", md: "left" }}
+          mb={{ base: "20px", md: "0" }}
+        >
           <Heading marginBottom="30px">Contact Us</Heading>
           <Text marginBottom="20px">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Have questions? Feel free to reach out, and we’ll be happy to assist
+            you.
           </Text>
         </Box>
+
+        {/* Contact Form */}
         <Box
-          width="40%"
+          width={{ base: "100%", md: "50%" }}
           display="flex"
           flexDirection="column"
-          marginLeft="15%"
-          marginTop="30px"
         >
           <form ref={form} onSubmit={sendEmail}>
-            <Text fontWeight="bold" fontSize="24px" marginBottom="10px">
+            <Text fontWeight="bold" fontSize="20px" marginBottom="10px">
               Name:
             </Text>
             <Input
-              placeholder="Enter Name"
-              name="user_name" // Name attribute is required by EmailJS to map data
+              placeholder="Enter your name"
+              name="user_name" // Name attribute is required by EmailJS
               marginBottom="20px"
               required
+              _placeholder={{ color: "gray.500" }}
             />
-            <Text fontWeight="bold" fontSize="24px" marginBottom="10px">
+            <Text fontWeight="bold" fontSize="20px" marginBottom="10px">
               Email:
             </Text>
             <Input
               type="email"
-              placeholder="Enter Email"
+              placeholder="Enter your email"
               name="user_email" // Name attribute is required by EmailJS
               marginBottom="20px"
               required
+              _placeholder={{ color: "gray.500" }}
             />
-            <Text fontWeight="bold" fontSize="24px" marginBottom="10px">
+            <Text fontWeight="bold" fontSize="20px" marginBottom="10px">
               Message:
             </Text>
             <Textarea
-              placeholder="Enter message"
+              placeholder="Enter your message"
               name="message" // Name attribute for EmailJS
-              height="300px"
+              height="200px"
               resize="none"
-              textAlign="left"
               marginBottom="20px"
               required
+              _placeholder={{ color: "gray.500" }}
             />
             <Button
-              type="submit" // Submit type button
+              type="submit"
               colorScheme="blue"
-              width="200px"
-              marginLeft="200px"
               leftIcon={<EmailIcon />}
+              width="auto"
+              marginLeft="0"
+              mt={4}
             >
-              Send!
+              Send Message
             </Button>
           </form>
         </Box>
-      </Box>
+      </Flex>
     </Box>
   );
 };

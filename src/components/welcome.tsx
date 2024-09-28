@@ -1,8 +1,9 @@
-import { Box, Text, Button, Image, Flex, Circle, Link } from "@chakra-ui/react";
+import { Box, Text, Button, Image, Flex, Circle } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
 
 const Welcome_Page = () => {
   const [activeSection, setActiveSection] = useState<string>("home");
+
   const handleScroll = () => {
     const scrollPos = window.scrollY;
 
@@ -45,11 +46,18 @@ const Welcome_Page = () => {
       id="home"
     >
       {/* Flex container for Welcome Text and Glasses */}
-      <Flex justifyContent="space-between" alignItems="center" height="80vh">
+      <Flex
+        justifyContent="space-between"
+        alignItems="center"
+        height="80vh"
+        flexDirection={{ base: "column", md: "row" }}
+      >
         {/* Welcome Text and Button */}
-        <Box flex="1" paddingLeft="100px" paddingTop={200}>
-          {" "}
-          {/* Swapped to the left */}
+        <Box
+          flex="1"
+          paddingLeft={{ base: "20px", md: "100px" }}
+          paddingTop={{ base: "100px", md: "200px" }}
+        >
           <Text fontSize="5xl" fontWeight="bold">
             Welcome to our vision
           </Text>
@@ -74,16 +82,25 @@ const Welcome_Page = () => {
           </Button>
         </Box>
 
-        {/* Glasses Image with individual positioning */}
-        <Box flex="1" paddingRight="100px" paddingTop={150}>
-          {" "}
-          {/* Swapped to the right */}
-          <Image src="specs.png" alt="Glasses Image" h="500px" w="500px" />
-        </Box>
         <Box
-          position="fixed" // Position the dots vertically in the middle
+          flex="1"
+          paddingRight={{ base: "20px", md: "100px" }}
+          paddingTop={{ base: "50px", md: "150px" }}
+        >
+          <Image
+            src="specs.png"
+            alt="Glasses Image"
+            maxH={{ base: "300px", md: "500px" }}
+            maxW={{ base: "300px", md: "500px" }}
+            objectFit="contain"
+          />
+        </Box>
+
+        {/* Scroll Dots */}
+        <Box
+          position="fixed"
           right="10px"
-          top="300px"
+          top="50%"
           transform="translateY(-50%)"
           zIndex="1000"
         >
@@ -94,12 +111,14 @@ const Welcome_Page = () => {
             mb={3}
             mr={2}
             background={activeSection === "home" ? "gray" : "none"}
+            cursor="pointer"
             onClick={() =>
               document
                 .getElementById("home")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
-          ></Circle>
+            _hover={{ background: "gray" }}
+          />
           <Circle
             size="12px"
             border="2px solid gray"
@@ -107,12 +126,14 @@ const Welcome_Page = () => {
             mb={3}
             mr={2}
             background={activeSection === "about" ? "gray" : "none"}
+            cursor="pointer"
             onClick={() =>
               document
                 .getElementById("about")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
-          ></Circle>
+            _hover={{ background: "gray" }}
+          />
           <Circle
             size="12px"
             border="2px solid gray"
@@ -120,12 +141,14 @@ const Welcome_Page = () => {
             mb={3}
             mr={2}
             background={activeSection === "team" ? "gray" : "none"}
+            cursor="pointer"
             onClick={() =>
               document
                 .getElementById("team")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
-          ></Circle>
+            _hover={{ background: "gray" }}
+          />
           <Circle
             size="12px"
             border="2px solid gray"
@@ -133,12 +156,14 @@ const Welcome_Page = () => {
             mb={3}
             mr={2}
             background={activeSection === "contact" ? "gray" : "none"}
+            cursor="pointer"
             onClick={() =>
               document
                 .getElementById("contact")
                 ?.scrollIntoView({ behavior: "smooth" })
             }
-          ></Circle>
+            _hover={{ background: "gray" }}
+          />
         </Box>
       </Flex>
     </Box>
