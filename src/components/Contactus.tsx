@@ -21,10 +21,10 @@ const Contactus = () => {
 
     emailjs
       .sendForm(
-        process.env.REACT_APP_EMAILJS_SERVICE_ID!, 
-        process.env.REACT_APP_EMAILJS_TEMPLATE_ID!, 
-        form.current!,       
-        process.env.REACT_APP_EMAILJS_USER_ID!
+        "service_nri27ov", // Your EmailJS service ID
+        "template_f04v2af", // Your EmailJS template ID
+        form.current!, // The form reference
+        "ox2ZKXfeOv4RTpwUu" // Your EmailJS user ID (Public Key)
       )
       .then(
         (result) => {
@@ -73,7 +73,8 @@ const Contactus = () => {
         >
           <Heading marginBottom="30px">Contact Us</Heading>
           <Text marginBottom="20px">
-          At Sadiq Vision, we are committed to making vision care accessible to those in need. Reach out to us if you have any questions about donating eyeglass lenses, partnering with us in our mission, or learning more about our ongoing projects to support underprivileged communities in Pakistan. Whether you’re looking to contribute, collaborate, or simply need more information, we’re here to help. Together, we can make a lasting impact by restoring sight and providing hope to those who need it most.
+            Have questions? Feel free to reach out, and we’ll be happy to assist
+            you.
           </Text>
         </Box>
 
@@ -117,16 +118,19 @@ const Contactus = () => {
               required
               _placeholder={{ color: "gray.500" }}
             />
-            <Button
-              type="submit"
-              colorScheme="blue"
-              leftIcon={<EmailIcon />}
-              width="auto"
-              marginLeft="0"
-              mt={4}
-            >
-              Send Message
-            </Button>
+
+            {/* Button Container */}
+            <Box display="flex" justifyContent="center">
+              <Button
+                type="submit"
+                colorScheme="blue"
+                leftIcon={<EmailIcon />}
+                width="auto"
+                mt={4}
+              >
+                Send Message
+              </Button>
+            </Box>
           </form>
         </Box>
       </Flex>
